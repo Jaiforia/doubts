@@ -1,11 +1,11 @@
 #include<stdio.h>
 #include<conio.h>
 void add(int A[10][10],int B[10][10],int C[10][10]);
-
+int i,j,m,n;
 void main()
 {
 	clrscr();
-	int q,w,A[10][10],B[10][10],C[10][10],D[10][10],i,j,m,n;
+	int q,w,A[10][10],B[10][10],C[10][10],D[10][10];
 	printf("Enter the no of rows and columns for first and second array:\n");
 	scanf("%d %d %d %d", &i, &j, &m, &n);
 	printf("\nEnter the elements for first matrix:\n");
@@ -43,12 +43,13 @@ void main()
 		printf("\n");
 	}
 	add(A,B,C);
-	printf("\nAddition of matrix:\n");
+	printf("\nmultiplication of matrix:\n");
 	for(q=0;q<i;q++)
 	{
 	    for(w=0;w<j;w++)
 		{
-		printf("%3d",C[q][w]);
+	       //	C[q][w]=A[q][w]+B[q][w];
+		printf("%d",C[q][w]);
 		}
 		printf("\n");
 	}
@@ -56,14 +57,17 @@ void main()
 }
 void add(int A[10][10],int B[10][10],int C[10][10])
 {
-	int q,w,i,j;
+	int q,w,k;
 	for(q=0;q<i;q++)
-		{
-			for(w=0;w<j;w++)
-				{
-				C[q][w]=A[q][w]+B[q][w];
-				}
-		}
-		return;
+	{
+	   for(w=0;w<n;w++)
+	       {
+		 for(k=0;k<j;k++)
+		      {
+		      C[q][w]+=A[q][k]*B[k][w];
+		      }
+	       }
+	}
+	return;
 }
 
