@@ -1,0 +1,53 @@
+1.c
+#include <stdio.h>
+#include <conio.h>
+#include <graphics.h>
+
+void main() 
+{
+    clrscr();
+    
+    int gd = DETECT, gm;
+    initgraph(&gd, &gm, "C:\\TURBOC3\\BGI");
+    
+    circle(5, 5, 4);
+    
+    getch();
+    closescreen();
+}
+
+ 2.c
+#include <stdio.h>
+#include <conio.h>
+#include <graphics.h>
+
+void main() 
+{
+    clrscr();
+    
+    int gd = DETECT, gm;
+    initgraph(&gd, &gm, "C:\\TURBOC3\\BGI");
+    
+    ellipse(50, 50, 0, 180, 10, 7);
+    
+    getch();
+    closegraph();
+}
+
+3.c
+#include <stdio.h>
+#include <conio.h>
+#include <graphics.h>
+
+void main()
+{
+    clrscr();
+    
+    int gd = DETECT, gm;
+    initgraph(&gd, &gm, "C:\\TURBOC3\\BGI");
+    
+    line(30, 30, 40, 40);
+    
+    getch();
+    closegraph();
+}
