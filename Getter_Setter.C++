@@ -1,6 +1,6 @@
 #include<iostream.h>
 #include<conio.h>
-int p;
+float p;
 class Student{
 	int rollno;
 	double mobtained,total_marks;
@@ -11,7 +11,7 @@ class Student{
 		cin>>rollno;
 		cout<<"Enter the marks obtained by student."<<endl;
 		cin>>mobtained;
-		cuot<<"Enter the total marks."<<endl;
+		cout<<"Enter the total marks."<<endl;
 		cin>>total_marks;
 	}
 	void percentage()
@@ -23,7 +23,7 @@ class Student{
 		cout<<"The rollno of stuent is:"<<rollno<<endl;
 		cout<<"The marks obtained by student is:"<<mobtained<<endl;
 		cout<<"The total marks is:"<<total_marks<<endl;
-		cout<<"The percentage obtained by student is:"<<p<<endl;
+		cout<<"The percentage obtained by student is:"<<p<<"%"<<endl;
 	}
 };
 void main()
